@@ -1,2 +1,4 @@
 node_modules
 .vscode
+dist/bundle.js
+package-lock.json
