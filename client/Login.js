@@ -31,7 +31,7 @@ function loginAuth(usernameText, passwordText, callback) {
     console.log('Connection Error')
   };
 
-  loginRequest.send(JSON.stringify({ usernameText: usernameText, passwordText: passwordText}));
+  loginRequest.send(JSON.stringify({ username: usernameText, password: passwordText}));
 }
 
 function signUpOut(usernameText, passwordText) {
@@ -54,7 +54,7 @@ function signUpOut(usernameText, passwordText) {
     console.log('Connection Error')
   };
 
-  loginRequest.send(JSON.stringify({ usernameText: usernameText, passwordText: passwordText}));
+  loginRequest.send(JSON.stringify({ username: usernameText, password: passwordText}));
 }
 
 class Login extends React.Component {

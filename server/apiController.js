@@ -1,4 +1,3 @@
-/* eslint-disable */
 const request = require('request');
 const apiController = {};
 
