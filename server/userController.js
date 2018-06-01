@@ -1,4 +1,4 @@
-const User = require('../db/mongodb-orm');
+const User = require('./../db/loginSchema');
 
 // middleware for logins && signups
 
