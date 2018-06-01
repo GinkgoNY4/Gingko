@@ -13,7 +13,7 @@ app.get('/apple', function(req, res){
 	console.log('In apple route');
 	res.sendFile(__dirname + './../dist/index.html');
 });
-app.get('/route42', function(req, res){
+app.get('/route42', (req, res) => {
 	console.log('In route42');
 	// res.sendFile(__dirname + './../dist/index.html'); //path.resolve('temp/index.html')
 	res.sendFile(path.resolve('dist/index.html'));
@@ -32,7 +32,7 @@ app.get('/login', (req, res) => {
 
 });
 
-app.get('/verifyuser', (req, res) {
+app.get('/verifyuser', (req, res) => {
 
 });
 
