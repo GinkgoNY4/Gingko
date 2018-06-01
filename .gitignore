@@ -2,3 +2,6 @@ node_modules
 .vscode
 dist/bundle.js
 package-lock.json
+server/server.js
+package.json
+server/userController.js

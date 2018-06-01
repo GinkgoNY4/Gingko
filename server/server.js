@@ -3,19 +3,21 @@ const express = require('express');
 const app = express();
 const path = require('path');
 const bodyParser = require('body-parser');
+const userController = require('userController'); 
+
+const mongoose = require('mongoose'); 
+const MLAB_URI = 'mongodb://admin:admin0@ds245250.mlab.com:45250/gingkony4';
+mongoose.connect(MLAB_URI);
+mongoose.connection.once('open', () => { 
+  console.log('Connected to Database'); 
+});
+
+const userRouter = express.Router();
 
 app.use(bodyParser.json());
 app.use(express.static(__dirname + './../dist'));
 
-app.get('/apple', function(req, res){
-	console.log('In apple route');
-	res.sendFile(__dirname + './../dist/index.html');
-});
-app.get('/route42', function(req, res){
-	console.log('In route42');
-	// res.sendFile(__dirname + './../dist/index.html'); //path.resolve('temp/index.html')
-	res.sendFile(path.resolve('dist/index.html'));
-});
+userRouter.post('/', userController.createUser);
 
 app.listen(3000);
 
