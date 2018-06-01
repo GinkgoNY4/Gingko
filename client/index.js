@@ -1,29 +1,30 @@
 /* eslint-disable */
 import React from 'react';
 import ReactDOM from 'react-dom';
-import { BrowserRouter, Route, Link } from 'react-router-dom';
+import {
+  BrowserRouter as Router,
+  Route,
+  Link,
+  Redirect,
+  withRouter
+} from 'react-router-dom';
 
-console.log(BrowserRouter);
-
-const Home = () => <div>Home</div>
-const Home2 = () => <div>Home2</div>
-const Home3 = () => <div>Home3</div>
+import Login from './Login.js';
+import Feed from './Feed.js';
 
 class App extends React.Component {
-  constructor(props, context) {
-    super(props, context);
-    console.log(this.state)
+  constructor(props) {
+    super(props);
   }
 
   render() {
     return (
-      <BrowserRouter>
+      <Router>
         <div>
-          <Route exact path='/' component={Home} />
-          <Route path='/about' component={Home2} />
-          <Route path='/route42' component={Home3} />
+          <Route exact path="/" component={Login} />
+          <Route path="/feed" component={Feed} />
         </div>
-      </BrowserRouter>
+      </Router>
     )
   }
 }
