@@ -25,7 +25,9 @@ userController.verifyUser = (req, res, next) => {
 		if (userInfo == null) {
 			res.send({error: 'user does not exist, please create an account'});
 		} else {
-			res.send(userInfo);
+			res.locals.userInfo = userInfo;
+			next();
+			// res.send(userInfo);
 		}
 	});
 
