@@ -1,11 +1,14 @@
-const feed = require('./Feed'); 
+import React from 'react';
 
-const Display = (props) => { 
+const Display = (props) => {
+  return (
   <div id="apiDisplay">
+  	<h1>New Display</h1>
     <p>{props.name}</p>
     <p>{props.weight}</p>
     {/* <img className="images" src={props.img}></img> */}
-  </div>     
-}
+  </div>
+  );   
+};
 
-export default Display; 
+export default Display;
