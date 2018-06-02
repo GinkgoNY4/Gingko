@@ -8,6 +8,7 @@ import {
   Redirect,
   withRouter
 } from 'react-router-dom';
+import Display from './Display';
 
 class Feed extends React.Component {
   constructor(props) {
@@ -17,8 +18,14 @@ class Feed extends React.Component {
 
   render() {
     let username = this.props.location.state.referrer.username;
+    let interests = this.props.location.state.referrer.interests;
+    let apiData = this.props.location.state.referrer.apiData;
+    let displayArr = []; 
+    for (let i = 0; i < interests.length; i++) { 
+      if (interest[i] === 0) displayArr.push(<Display info={apiData[i]}/>);
+    }//end for
     return (
-      <div>username</div>
+      <div>{displayArr}</div>
     )
   }
 }

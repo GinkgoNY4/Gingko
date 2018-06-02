@@ -2,9 +2,10 @@ const express = require('express');
 const app = express();
 const path = require('path');
 const bodyParser = require('body-parser');
-const userController = require ('./userController');
-const router = express.Router();
-const port = process.env.PORT || 3000;
+const userController = require('./userController'); 
+const apiController = require('./apiController'); 
+// const router = express.Router();
+// const port = process.env.PORT || 3000;
 
 const mongoose = require('mongoose'); 
 const MLAB_URI = 'mongodb://admin:admin0@ds245250.mlab.com:45250/gingkony4';
