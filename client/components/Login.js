@@ -106,7 +106,7 @@ class Login extends React.Component {
     return (
       <div>
         <input type="text" name="username" id="usernameInput" defaultValue="Username"/>
-        <input type="text" name="password" id="passwordInput" defaultValue="Passowrd"/>
+        <input type="text" name="password" id="passwordInput" defaultValue="Password"/>
         <button onClick={() => {
           let usernameText = document.getElementById('usernameInput').value;
           let passwordText = document.getElementById('passwordInput').value;
